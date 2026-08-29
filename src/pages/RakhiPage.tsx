@@ -360,10 +360,6 @@ export function RakhiPage() {
     setHandImageLoaded(true);
   };
 
-  const removeRakhi = (rakhiId: string) => {
-    setPlacedRakhis((prev) => prev.filter((p) => p.rakhiId !== rakhiId));
-  };
-
   const handleCelebrate = () => {
     if (placedRakhis.length === 0 || !profileId) return;
 

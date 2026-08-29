@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Sparkle, SparkleIcon, Wallet } from "lucide-react";
+import { Wallet } from "lucide-react";
 
 const RAKHI_COUNTS_STORAGE_KEY = "rakhi-tie-counts";
 const PROFILE_REWARDS_STORAGE_KEY = "rakhi-profile-rewards";
