@@ -171,7 +171,7 @@ export function HomePage() {
                 to={`/rakhi/${profile.id}`}
                 className="group block overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-sky-300 hover:shadow-md"
               >
-                <div className="relative aspect-1/1 overflow-hidden bg-sky-50">
+                <div className="relative aspect-square overflow-hidden bg-sky-50">
                   <img
                     src={profile.image}
                     alt={profile.name}
