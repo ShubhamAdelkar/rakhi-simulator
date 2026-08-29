@@ -962,11 +962,6 @@ function CelebrationOverlay({
                     ? `You got ${formatINR(rewardTotal)} from ${profile.name}!`
                     : message || "Great job!"}
                 </DialogTitle>
-                {/* <DialogDescription className="text-lg">
-                  {rewardTotal > 0
-                    ? "Celebration complete 🎉"
-                    : "This combo was already claimed."}
-                </DialogDescription> */}
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
