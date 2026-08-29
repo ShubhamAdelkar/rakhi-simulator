@@ -6,12 +6,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { profiles, rakhis, handImage, formatINR } from "@/data/profiles";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { Check, ArrowLeft, X, RotateCcw } from "lucide-react";
 
 interface Position {
