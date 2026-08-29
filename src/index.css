@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito", "Avenir Next", ui-rounded, sans-serif;
+  --color-primary: #58a700;
+  --color-primary-foreground: oklch(100% 0 0);
+  --color-secondary: oklch(95% 0.03 220);
+  --color-secondary-foreground: oklch(25% 0.04 240);
+  --color-muted: oklch(96% 0.02 220);
+  --color-muted-foreground: oklch(48% 0.04 240);
+  --color-accent: oklch(94% 0.05 220);
+  --color-accent-foreground: oklch(25% 0.04 240);
+  --color-destructive: oklch(62% 0.22 25);
+  --color-destructive-foreground: oklch(98% 0.01 210);
+  --color-border: oklch(88% 0.03 230);
+  --color-input: oklch(88% 0.03 230);
+  --color-ring: oklch(72% 0.19 210);
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(25% 0.04 240);
+  --color-card: oklch(100% 0 0);
+  --color-card-foreground: oklch(5% 0.08 222);
+  --color-popover: oklch(100% 0 0);
+  --color-popover-foreground: oklch(5% 0.08 222);
+  --radius: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Nunito", "Avenir Next", ui-rounded, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer utilities {
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dashoffset: 16;
+    }
+  }
+
+  .animate-dash {
+    animation: dash 1s linear infinite;
+  }
+
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0.3) rotate(-15deg);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1) rotate(-15deg);
+    }
+    70% {
+      transform: scale(0.95) rotate(-15deg);
+    }
+    100% {
+      transform: scale(1) rotate(-15deg);
+      opacity: 1;
+    }
+  }
+
+  .animate-bounce-in {
+    animation: bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      filter: drop-shadow(0 0 4px #f59e0b);
+    }
+    50% {
+      filter: drop-shadow(0 0 16px #f59e0b) drop-shadow(0 0 24px #f59e0b);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 1.5s ease-in-out infinite;
+  }
+
+  @keyframes scale-in {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
