@@ -1,0 +1,23 @@
+{
+  "name": "Rakhi Simulator",
+  "short_name": "Rakhi",
+  "description": "Rakhi Simulator - tie rakhis and celebrate Raksha Bandhan.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/gato.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

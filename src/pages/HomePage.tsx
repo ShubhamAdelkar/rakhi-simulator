@@ -175,6 +175,8 @@ export function HomePage() {
                   <img
                     src={profile.image}
                     alt={profile.name}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-105"
                     onError={(e) => {
                       e.currentTarget.style.display = "none";

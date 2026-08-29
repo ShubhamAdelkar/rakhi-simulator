@@ -515,6 +515,8 @@ export function RakhiPage() {
             <img
               src={profile.image}
               alt={profile.name}
+              loading="lazy"
+              decoding="async"
               className="h-10 w-10 rounded-full border-2 border-sky-200 object-cover"
               onError={(e) => {
                 e.currentTarget.style.display = "none";
@@ -543,6 +545,8 @@ export function RakhiPage() {
                     ref={handRef}
                     src={handImage}
                     alt="Hand for rakhi"
+                    loading="eager"
+                    decoding="async"
                     className="max-w-[80%] max-h-[90%] object-contain lg:max-w-[65%] lg:max-h-[75%]"
                     onLoad={handleHandLoad}
                     onError={() => {}}
@@ -697,6 +701,8 @@ export function RakhiPage() {
                           <img
                             src={rakhi.image}
                             alt={rakhi.name}
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover"
                             onError={(e) => {
                               e.currentTarget.style.display = "none";
@@ -763,6 +769,8 @@ export function RakhiPage() {
                           <img
                             src={rakhi?.image}
                             alt={rakhi?.name}
+                            loading="lazy"
+                            decoding="async"
                             className="w-8 h-8 rounded object-cover"
                           />
                           <span className="flex-1 truncate text-sm font-bold text-slate-600">
@@ -813,6 +821,8 @@ function PlacedRakhi({ rakhi, position }: { rakhi: any; position: Position }) {
       <img
         src={rakhi.image}
         alt={rakhi.name}
+        loading="lazy"
+        decoding="async"
         className="block w-full h-full drop-shadow-sm"
         style={{
           objectFit: "cover",
@@ -874,6 +884,8 @@ function DraggingRakhiPreview({
         <img
           src={rakhi.image}
           alt={rakhi.name}
+          loading="lazy"
+          decoding="async"
           className="block h-full w-full drop-shadow-sm animate-pulse cursor-grab active:cursor-grabbing"
           style={{
             objectFit: "contain",
@@ -932,6 +944,8 @@ function CelebrationOverlay({
                   <img
                     src="/cat-meme.gif"
                     alt="cat-meme"
+                    loading="lazy"
+                    decoding="async"
                     className="h-30 items-center"
                   />
                 </div>
