@@ -36,6 +36,12 @@ const RAKHI_PLACEMENTS_STORAGE_KEY = "rakhi-placements";
 const PROFILE_REWARDS_STORAGE_KEY = "rakhi-profile-rewards";
 const PROFILE_CLAIMS_STORAGE_KEY = "rakhi-profile-claims";
 const USER_WALLET_STORAGE_KEY = "rakhi-user-wallet";
+const CELEBRATION_GIFS = [
+  "/celebrations/cat-dancing.gif",
+  "/celebrations/cat-meme.gif",
+  "/celebrations/cat-mogging.gif",
+  "/celebrations/shocked-cat.gif",
+];
 
 function getTotalWalletFromRewards(rewards: Record<string, number>) {
   return Object.values(rewards).reduce(
@@ -918,9 +924,15 @@ function CelebrationOverlay({
   navigate: any;
 }) {
   const [burst, setBurst] = useState(false);
+  const [selectedCelebrationGif, setSelectedCelebrationGif] = useState(
+    CELEBRATION_GIFS[0],
+  );
 
   useEffect(() => {
     if (isOpen) {
+      setSelectedCelebrationGif(
+        CELEBRATION_GIFS[Math.floor(Math.random() * CELEBRATION_GIFS.length)],
+      );
       setTimeout(() => setBurst(true), 100);
     } else {
       setBurst(false);
@@ -938,12 +950,12 @@ function CelebrationOverlay({
       >
         <DialogContent className="max-w-md overflow-visible p-6 md:p-8">
           <div className="relative z-10">
-            <div className="relative z-10 text-center">
+            <div className="relative z-10 text-center flex flex-col items-center gap-4">
               <div className="flex flex-col items-center justify-center gap-2">
                 <div className="inline-flex h-30 animate-scale-in items-center justify-center rounded-full">
                   <img
-                    src="/cat-meme.gif"
-                    alt="cat-meme"
+                    src={selectedCelebrationGif}
+                    alt="celebration-gif"
                     loading="lazy"
                     decoding="async"
                     className="h-30 items-center"
@@ -955,11 +967,11 @@ function CelebrationOverlay({
                     ? `You got ${formatINR(rewardTotal)} from ${profile.name}!`
                     : message || "Great job!"}
                 </DialogTitle>
-                <DialogDescription className="text-lg">
+                {/* <DialogDescription className="text-lg">
                   {rewardTotal > 0
                     ? "Celebration complete 🎉"
                     : "This combo was already claimed."}
-                </DialogDescription>
+                </DialogDescription> */}
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
