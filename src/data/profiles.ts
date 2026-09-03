@@ -2,7 +2,8 @@ export const profiles = [
   { id: "mayu", name: "Mayu", image: "/mayu.jpg" },
   { id: "sai", name: "Sai", image: "/sai.jpg" },
   { id: "chotu", name: "Chotu", image: "/chotu.jpg" },
-  { id: "bablu", name: "Bablu", image: "/cat-meme2.gif" },
+  { id: "samu", name: "Samu", image: "/samu.jpeg" },
+  { id: "cat", name: "Cat", image: "/cat-meme2.gif" },
   { id: "raja", name: "Raja", image: "/raja.jpg" },
   { id: "sumedh", name: "Sumedh", image: "/sumedh.jpg" },
 ];
