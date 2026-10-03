@@ -100,7 +100,7 @@ export function HomePage() {
         <DialogContent className="max-w-md">
           <DialogHeader>
             <DialogTitle className="text-2xl font-extrabold text-slate-800">
-              Welcome to Rakhi Shit!
+              Welcome to Rakhi-Simulator!
             </DialogTitle>
             <DialogDescription className="text-slate-500">
               Type your name to start your celebration.
